@@ -1,44 +1,44 @@
-# import pandas as pd
-# import os
+import pandas as pd
+import os
 
-# data_path = "data/raw"
+data_path = "data/raw"
 
-# csv_files = [f for f in os.listdir(data_path) if f.endswith(".csv")]
+csv_files = [f for f in os.listdir(data_path) if f.endswith(".csv")]
 
-# for file in csv_files:
-#     print("\n" + "="*60)
-#     print(f"FILE: {file}")
-#     print("="*60)
+for file in csv_files:
+  print("\n" + "="*60)
+print(f"FILE: {file}")
+print("="*60)
 
-#     df = pd.read_csv(os.path.join(data_path, file))
+df = pd.read_csv(os.path.join(data_path, file))
 
-#     print("\nShape:")
-#     print(df.shape)
+print("\nShape:")
+print(df.shape)
 
-#     print("\nData Types:")
-#     print(df.dtypes)
+print("\nData Types:")
+print(df.dtypes)
 
-#     print("\nFirst 5 Rows:")
-#     print(df.head())
+print("\nFirst 5 Rows:")
+print(df.head())
 
-#     print("\nMissing Values:")
-#     print(df.isnull().sum())
+print("\nMissing Values:")
+print(df.isnull().sum())
 
 import pandas as pd
 
-# fund_master = pd.read_csv("data/raw/01_fund_master.csv")
+fund_master = pd.read_csv("data/raw/01_fund_master.csv")
 
-# print("\nUnique Fund Houses:")
-# print(fund_master["fund_house"].unique())
+print("\nUnique Fund Houses:")
+print(fund_master["fund_house"].unique())
 
-# print("\nUnique Categories:")
-# print(fund_master["category"].unique())
+print("\nUnique Categories:")
+print(fund_master["category"].unique())
 
-# print("\nUnique Sub Categories:")
-# print(fund_master["sub_category"].unique())
+print("\nUnique Sub Categories:")
+print(fund_master["sub_category"].unique())
 
-# print("\nUnique Risk Categories:")
-# print(fund_master["risk_category"].unique())
+print("\nUnique Risk Categories:")
+print(fund_master["risk_category"].unique())
 
 fund_master = pd.read_csv("data/raw/01_fund_master.csv")
 nav_history = pd.read_csv("data/raw/02_nav_history.csv")
