@@ -50,8 +50,31 @@ CREATE TABLE fact_performance (
 
 CREATE TABLE fact_aum (
     aum_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fund_house TEXT,
+    date DATE,
+    aum_crore REAL
+);
+
+CREATE TABLE fact_sip (
+    sip_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    month DATE,
+    sip_inflow_crore REAL,
+    active_sip_accounts_crore REAL
+);
+
+CREATE TABLE fact_category_inflow (
+    inflow_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    month DATE,
+    category TEXT,
+    net_inflow_crore REAL
+);
+
+CREATE TABLE fact_holdings (
+    holding_id INTEGER PRIMARY KEY AUTOINCREMENT,
     amfi_code INTEGER,
-    aum_crore REAL,
+    stock_symbol TEXT,
+    sector TEXT,
+    weight_pct REAL,
     FOREIGN KEY (amfi_code)
     REFERENCES dim_fund(amfi_code)
 );
